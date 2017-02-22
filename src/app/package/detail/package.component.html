@@ -1,0 +1,10 @@
+<div *ngIf="selectedPackage">
+	<h2>{{selectedPackage.name}} details!</h2>
+	<div>
+		<label>id: </label>{{selectedPackage.id}}
+	</div>
+	<div>
+		<label>name: </label> <input [(ngModel)]="selectedPackage.name"
+			placeholder="name" />
+	</div>
+</div>

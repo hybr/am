@@ -6,17 +6,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { PackageComponent } from './package/package.component';
+import { PackageListComponent } from './package/list/package.component';
+import { PackageDetailComponent } from './package/detail/package.component';
 
 
 const appRoutes: Routes = [
-    { path: 'packages', component: PackageComponent }
+    { path: 'packages', component: PackageListComponent }
 ];
 
 @NgModule( {
     declarations: [
         AppComponent,
-        PackageComponent
+        PackageListComponent,
+        PackageDetailComponent
     ],
     imports: [
         RouterModule.forRoot( appRoutes ),
