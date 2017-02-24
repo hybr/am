@@ -1,10 +1,8 @@
 
-import 'hammerjs';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +14,7 @@ import { PackageDetailComponent } from './package/detail/package.component';
         BrowserModule,
         FormsModule,
         HttpModule,
-        AppRoutingModule,
-        MaterialModule.forRoot()
+        AppRoutingModule
     ],
     declarations: [
         AppComponent,

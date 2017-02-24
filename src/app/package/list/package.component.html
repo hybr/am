@@ -1,12 +1,23 @@
-<h2>Packages List</h2>
-<md-nav-list>
-<md-list-item 
-	*ngFor="let package of packages"
-	(click)="onSelect(package)"
-	[class.selected]="package === selectedPackage"
->
-	<span>{{package.id}}</span>
-	{{package.name}} 
-</md-list-item>
-</md-nav-list>
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Packages</h1>
+	</div>
+
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true" data-filter="true"
+			data-filter-placeholder="Search Package" data-autodividers="true">
+			<li *ngFor="let package of packages" (click)="onSelect(package)"
+				[class.selected]="package === selectedPackage"><span>{{package.id}}</span>
+				{{package.name}}</li>
+		</ul>
+	</div>
+
+	<div data-role="footer">
+		<h4></h4>
+	</div>
+
+</div>
+<!-- /page -->
+
 <app-package-detail [inputPackage]="selectedPackage">Detail</app-package-detail>

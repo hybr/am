@@ -1,10 +1,40 @@
-<div *ngIf="selectedPackage">
-	<h2>{{selectedPackage.name}} details!</h2>
-	<div>
-		<label>id: </label>{{selectedPackage.id}}
+
+
+
+
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Edit Package {{selectedPackage.name}}</h1>
 	</div>
-	<div>
-		<label>name: </label> <input [(ngModel)]="selectedPackage.name"
-			placeholder="name" />
+
+	<div data-role="content">
+
+		<div *ngIf="selectedPackage">
+
+			<form>
+			    <ul data-role="listview" data-inset="true">
+			        <li class="ui-field-contain">
+			            <label>id: </label>{{selectedPackage.id}}
+			        </li>
+			        <li class="ui-field-contain">
+			            <label>name: </label> <input [(ngModel)]="selectedPackage.name"
+						placeholder="name" />
+			        </li>
+			        <li class="ui-body ui-body-b">
+			            <fieldset class="ui-grid-a">
+			                    <div class="ui-block-a"><button type="submit" class="ui-btn ui-corner-all ui-btn-a">Cancel</button></div>
+			                    <div class="ui-block-b"><button type="submit" class="ui-btn ui-corner-all ui-btn-a">Submit</button></div>
+			            </fieldset>
+			        </li>
+			    </ul>
+			</form>
+
+		</div>
+	<div data-role="footer">
+		<h4></h4>
 	</div>
+
 </div>
+<!-- /page -->
