@@ -1,7 +1,12 @@
 <h2>Packages List</h2>
-<ol class="packages">
-	<li *ngFor="let package of packages" (click)="onSelect(package)"
-		[class.selected]="package === selectedPackage"><span
-		class="badge">{{package.id}}</span> {{package.name}}</li>
-</ol>
+<md-nav-list>
+<md-list-item 
+	*ngFor="let package of packages"
+	(click)="onSelect(package)"
+	[class.selected]="package === selectedPackage"
+>
+	<span>{{package.id}}</span>
+	{{package.name}} 
+</md-list-item>
+</md-nav-list>
 <app-package-detail [inputPackage]="selectedPackage">Detail</app-package-detail>
